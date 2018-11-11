@@ -1,0 +1,64 @@
+#include "tamagoch.h"
+
+tamagoch::tamagoch(QObject *parent) : QObject(parent)
+{
+
+}
+int tamagoch::getHealth()
+{
+    return this->health;
+}
+
+int tamagoch::getHappiness()
+{
+    return this->happiness;
+}
+
+int tamagoch::getFood()
+{
+    return this->food;
+}
+
+void tamagoch::feed()
+{
+    food += 10;
+}
+
+void tamagoch::play()
+{
+    happiness += 10;
+}
+
+void tamagoch::wash()
+{
+    health += 10;
+}
+
+bool tamagoch::isAlive()
+{
+    if (health < 0){
+        return false;
+    }
+    if (happiness < 0){
+        return false;
+    }
+    if (food < 0){
+        return false;
+    }
+}
+
+void tamagoch::setHealth()
+    {
+        
+    }
+
+void tamagoch::setHappinneess()
+    {
+    happiness += last_action-currTime;
+    }
+
+void tamagoch::setFood()
+{
+     food += last_action-currTime;
+} 
+

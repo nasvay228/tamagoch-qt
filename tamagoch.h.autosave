@@ -1,0 +1,37 @@
+#ifndef TAMAGOCH_H
+#define TAMAGOCH_H
+
+#include <QObject>
+
+class tamagoch : public QObject
+{
+    Q_OBJECT
+public:
+    explicit tamagoch(QObject *parent = nullptr);
+private:
+    QString name; //имя
+    int health; //здоровье
+    int happiness; //счастье
+    int food; //сытость
+    int last_action; // время(!) последнего действия
+public:
+    QString getName();
+    int getHealth();
+    int getHappiness();
+    int getFood();
+
+    void feed();
+    void play();
+    void wash();
+
+    bool isAlive();
+    
+    void setHealth();
+    void setHappinneess();
+    void setFood();
+signals:
+
+public slots:
+};
+
+#endif // TAMAGOCH_H
