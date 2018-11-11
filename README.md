@@ -1,0 +1,2 @@
+# tamagoch-qt
+qqq
